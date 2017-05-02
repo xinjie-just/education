@@ -73,6 +73,9 @@ html {
 }
 body {
   width: 100%;
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
   font-size: 16px;
   color: #333333;
   background-color: #fff;
@@ -531,9 +534,13 @@ label:hover {
   padding-top: 80px;
 }
 .banner {
-  width: 1200px;
+  width: 100%;
+  max-width: 1920px;
   margin-right: auto;
   margin-left: auto;
+  background-color: #b9b8ba;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
@@ -543,10 +550,15 @@ label:hover {
 }
 .carousel {
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 969px;
+  height: 382px;
 }
 .carousel-inner {
   position: relative;
   width: 100%;
+  height: 382px;
   overflow: hidden;
 }
 .carousel-inner > .item {
@@ -828,6 +840,9 @@ label:hover {
   text-align: center;
   font-weight: normal;
   margin-bottom: 15px;
+}
+.general-profile ul li h3 span {
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -849,10 +864,11 @@ label:hover {
 }
 .general-profile ul li p {
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 25px;
   text-align: center;
   letter-spacing: .1em;
-  height: 90px;
+  height: 100px;
+  overflow: hidden;
   border-bottom: 2px solid #dbdbdb;
 }
 .general-profile ul li a {
@@ -946,16 +962,18 @@ label:hover {
 }
 .news-center .news-classify h3 {
   float: left;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   width: 170px;
   background-repeat: no-repeat;
   background-position: left top;
   padding-top: 90px;
+  padding-right: 20px;
 }
 .news-center .news-classify h3 span {
   display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .news-center .news-classify h3 span.en {
   font-size: 16px;
@@ -1082,8 +1100,12 @@ label:hover {
   display: block;
   padding: 10px 20px;
   background-color: #12c2b0;
+  transition: background-color 0.3s linear 0s;
   color: #fff;
   text-transform: uppercase;
+}
+.news-center .news-classify > a:hover {
+  background-color: #04b4a2;
 }
 .news-center .quality-assessment h3 {
   background-image: url(../images/quality-icon.png);
@@ -1093,4 +1115,147 @@ label:hover {
 }
 .news-center .education-evalution h3 {
   background-image: url(../images/evalution-icon.png);
+}
+/*服务*/
+.service {
+  width: 100%;
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+}
+.service h2 {
+  display: block;
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 100px;
+  text-align: center;
+  background: url(../images/divider-line-left.png) left 52px no-repeat, url(../images/divider-line-right.png) right 52px no-repeat;
+}
+.service h2 span {
+  display: block;
+}
+.service h2 span.cn {
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #494949;
+}
+.service h2 span.en {
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #5c5c5c;
+}
+.service ul {
+  margin-top: 40px;
+  display: block;
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.service ul:before {
+  content: "";
+  display: table;
+}
+.service ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.service ul li {
+  float: left;
+  width: 25%;
+  height: 210px;
+}
+.service ul li a {
+  z-index: 11;
+  display: block;
+  position: relative;
+  border: 1px solid #e2e2e2;
+  width: 100%;
+  height: 210px;
+  text-align: center;
+  overflow: hidden;
+}
+.service ul li a .hasicon {
+  z-index: 11;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 210px;
+  padding-top: 30px;
+}
+.service ul li a .hasicon i {
+  display: inline-block;
+  font-size: 50px;
+  color: #12c2b0;
+  padding: 10px 15px 0;
+  border-bottom: 1px solid #999;
+}
+.service ul li a .hasicon h4 {
+  margin-top: 15px;
+  text-align: center;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.service ul li a .hasicon h4 span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.service ul li a .hasicon h4 span.cn {
+  font-size: 16px;
+  color: #544a4a;
+  margin-bottom: 5px;
+}
+.service ul li a .hasicon h4 span.en {
+  font-size: 14px;
+  color: #a2a2a2;
+  text-transform: uppercase;
+}
+.service ul li a .noicon {
+  z-index: 13;
+  position: absolute;
+  width: 100%;
+  height: 210px;
+  margin-top: 210px;
+  padding: 15px;
+  line-height: 1.5;
+  transition: all .5s linear 0s;
+  background-color: #fff;
+  overflow: hidden;
+}
+.service ul li a .noicon h4 {
+  font-size: 16px;
+  color: #544a4a;
+  margin-bottom: 15px;
+}
+.service ul li a .noicon p {
+  font-size: 14px;
+  color: #999;
+  line-height: 1.5;
+}
+.service ul li a:hover {
+  border-color: #b2b2b2;
+}
+.service ul li a:hover .noicon {
+  margin-top: 0;
+}
+/*决策依据，监测评估*/
+.slogan2 {
+  margin-top: 60px;
+  width: 100%;
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 152px;
+  background: url(../images/slogan2-bg.png) repeat-x;
+}
+.slogan2 img {
+  display: block;
+  width: 1440px;
+  height: 152px;
 }

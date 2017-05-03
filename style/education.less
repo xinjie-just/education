@@ -403,6 +403,8 @@ label {
 .icon-phone:before { content: "\e615"; }
 .icon-scan:before { content: "\e65b"; }
 .icon-stick:before { content: "\e68e"; }
+.icon-signup:before { content: "\e683"; }
+.icon-signin:before { content: "\e602"; }
 .icon-crm:before { content: "\e65c"; }
 .icon-introduction:before { content: "\e65d"; }
 .icon-message:before { content: "\e65e"; }
@@ -477,10 +479,19 @@ label {
             &:first-of-type {
                 margin-right: 25px;
             }
+            i {
+                color: #666;
+                margin-right: 8px;
+                font-size: @fs + 2;
+                .transition;
+            }
             &:hover {
                 border: 2px solid @main-color;
                 color: #fff;
                 background-color: @main-color;
+                i {
+                    color: #fff;
+                }
             }
         }
     }
@@ -490,7 +501,7 @@ label {
         @height: 50px;
         height: @height;
         top: 50%;
-        right: 200px;
+        right: 30px;
         transform: translateY(-50%);
         ul {
             .clearfix;
@@ -900,9 +911,9 @@ label {
         h3 {
             .fl;
             width: 170px;
-            background-repeat: no-repeat;
-            background-position: left top;
-            padding: 110px 20px 0 10px;
+            //background-repeat: no-repeat;
+            //background-position: left top;
+            //padding: 110px 20px 0 10px;
             span {
                 display: block;
                 width: 100%;
@@ -1019,6 +1030,7 @@ label {
             }
         }
     }
+    /*
     .quality-assessment {
         h3 {
             background-image: url(../images/quality-icon.png);
@@ -1034,6 +1046,7 @@ label {
             background-image: url(../images/evalution-icon.png);
         }
     }
+    */
 }
 
 /*服务*/
@@ -1341,6 +1354,7 @@ label {
         }
     }
     .other {
+        z-index: 9999;
         position: fixed;
         top: 400px;
         //left: 50%;
@@ -1370,6 +1384,7 @@ label {
                 box-shadow: 0 0 5px #999;
                 padding: 5px;
                 text-align: center;
+                background-color: #fff;
                 span {
                     display: block;
                     font-size: @fs - 2;

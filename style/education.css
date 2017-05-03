@@ -372,6 +372,12 @@ label:hover {
 .icon-stick:before {
   content: "\e68e";
 }
+.icon-signup:before {
+  content: "\e683";
+}
+.icon-signin:before {
+  content: "\e602";
+}
 .icon-crm:before {
   content: "\e65c";
 }
@@ -489,17 +495,26 @@ label:hover {
 #header #signinSignup a:first-of-type {
   margin-right: 25px;
 }
+#header #signinSignup a i {
+  color: #666;
+  margin-right: 8px;
+  font-size: 18px;
+  transition: all .4s ease .1s;
+}
 #header #signinSignup a:hover {
   border: 2px solid #14c2b0;
   color: #fff;
   background-color: #14c2b0;
+}
+#header #signinSignup a:hover i {
+  color: #fff;
 }
 #header #nav {
   display: none;
   position: absolute;
   height: 50px;
   top: 50%;
-  right: 200px;
+  right: 30px;
   transform: translateY(-50%);
 }
 #header #nav ul:before {
@@ -882,6 +897,23 @@ label:hover {
   margin-right: auto;
   margin-left: auto;
   margin-top: 120px;
+  /*
+    .quality-assessment {
+        h3 {
+            background-image: url(../images/quality-icon.png);
+        }
+    }
+    .news {
+        h3 {
+            background-image: url(../images/news-icon.png);
+        }
+    }
+    .education-evalution {
+        h3 {
+            background-image: url(../images/evalution-icon.png);
+        }
+    }
+    */
 }
 .news-center .h2-bg {
   width: 100%;
@@ -935,9 +967,6 @@ label:hover {
 .news-center .news-classify h3 {
   float: left;
   width: 170px;
-  background-repeat: no-repeat;
-  background-position: left top;
-  padding: 110px 20px 0 10px;
 }
 .news-center .news-classify h3 span {
   display: block;
@@ -1082,15 +1111,6 @@ label:hover {
 }
 .news-center .news-classify > a:hover {
   background-color: #06b4a2;
-}
-.news-center .quality-assessment h3 {
-  background-image: url(../images/quality-icon.png);
-}
-.news-center .news h3 {
-  background-image: url(../images/news-icon.png);
-}
-.news-center .education-evalution h3 {
-  background-image: url(../images/evalution-icon.png);
 }
 /*服务*/
 .service {
@@ -1439,6 +1459,7 @@ label:hover {
   vertical-align: middle;
 }
 #footer .other {
+  z-index: 9999;
   position: fixed;
   top: 400px;
   right: 25px;
@@ -1467,6 +1488,7 @@ label:hover {
   box-shadow: 0 0 5px #999;
   padding: 5px;
   text-align: center;
+  background-color: #fff;
 }
 #footer .other .weixin .weixin-code span {
   display: block;

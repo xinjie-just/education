@@ -36,7 +36,7 @@ html {
 
 //为 body 元素设置字体尺寸和类型
 @text-color: #333;
-@main-color: #12c2b0;
+@main-color: #14c2b0;
 @fs: 16px;
 .page-width {    
     width: 100%;
@@ -440,7 +440,13 @@ label {
         left: 30px;
         transform: translateY(-50%);
         width: 385px;
-        height: 66px;
+        height: @size;
+        img {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
     }
     #slogan {
         position: absolute;
@@ -451,7 +457,7 @@ label {
         height: 64px;
     }
     #signinSignup {
-        @height: 50px;
+        @height: 45px;
         position: absolute;
         top: 50%;
         right: 30px;
@@ -484,7 +490,7 @@ label {
         @height: 50px;
         height: @height;
         top: 50%;
-        right: 30px;
+        right: 200px;
         transform: translateY(-50%);
         ul {
             .clearfix;
@@ -494,12 +500,12 @@ label {
                     display: block;
                     height: @height;
                     line-height: @height - 4;
-                    padding-right: 25px;
-                    padding-left: 25px;
+                    padding-right: 42px;
+                    padding-left: 42px;
                     color: #666;
                     font-size: @fs + 2;
                     border: 2px solid #ededed;
-                    margin-right: 25px;
+                    margin-right: 10px;
                     .transition;
                     &:hover,
                     &.active {
@@ -523,7 +529,7 @@ label {
 
 .banner {
     .page-width;
-    background-color: #b9b8ba;
+    //background-color: #b9b8ba;
     padding-top: 100px;
     padding-bottom: 100px;
 }
@@ -620,42 +626,22 @@ label {
 }
 .carousel-control {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 15%;
-  font-size: 20px;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
-  background-color: rgba(0, 0, 0, 0);
-  filter: alpha(opacity=50);
-  opacity: .5;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 58px;
+  height: 116px;
+  background-repeat: no-repeat;
 }
 .carousel-control.left {
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
-  background-image:      -o-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .0001)));
-  background-image:         linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
-  background-repeat: repeat-x;
+  left: -58px;
+  background-image: url(../images/left.png);
 }
 .carousel-control.right {
-  right: 0;
-  left: auto;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
-  background-image:      -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .0001)), to(rgba(0, 0, 0, .5)));
-  background-image:         linear-gradient(to right, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
-  background-repeat: repeat-x;
+  right: -58px;
+  background: url(../images/right.png);
 }
 .carousel-control:hover,
 .carousel-control:focus {
-  color: #fff;
-  text-decoration: none;
-  filter: alpha(opacity=90);
-  outline: 0;
   opacity: .9;
 }
 .carousel-control .icon-prev,
@@ -693,7 +679,7 @@ label {
 }
 .carousel-indicators {
   position: absolute;
-  bottom: 10px;
+  bottom: -70px;
   left: 50%;
   z-index: 15;
   width: 60%;
@@ -704,21 +690,24 @@ label {
 }
 .carousel-indicators li {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 1px;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
   text-indent: -999px;
   cursor: pointer;
   background-color: #000 \9;
   background-color: rgba(0, 0, 0, 0);
-  border: 1px solid #fff;
-  border-radius: 10px;
+  border: 1px solid #babdbf;
+  //box-shadow: 0 0 3px #babdbf;
+  border-radius: 50%;
 }
 .carousel-indicators .active {
-  width: 12px;
-  height: 12px;
+  width: 20px;
+  height: 20px;
   margin: 0;
-  background-color: #fff;
+  background-color: #12c2b0;
+  border-color: transparent;
+  box-shadow: 0 0 0 transparent;
 }
 .carousel-caption {
   position: absolute;
@@ -735,43 +724,17 @@ label {
 .carousel-caption .btn {
   text-shadow: none;
 }
-@media screen and (min-width: 768px) {
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-prev,
-  .carousel-control .icon-next {
-    width: 30px;
-    height: 30px;
-    margin-top: -10px;
-    font-size: 30px;
-  }
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .icon-prev {
-    margin-left: -10px;
-  }
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-next {
-    margin-right: -10px;
-  }
-  .carousel-caption {
-    right: 20%;
-    left: 20%;
-    padding-bottom: 30px;
-  }
-  .carousel-indicators {
-    bottom: 20px;
-  }
-}
+
 
 /*中心概况*/
 .general-profile {
     .center-content;
-    margin-top: 60px;
+    margin-top: 100px;
     h2{
         width: 1200px;
-        height: 100px;
-        background: url(../images/divider-line-left.png) 313px 90px no-repeat,
-                    url(../images/divider-line-right.png) 600px 90px no-repeat;
+        height: 110px;
+        background: url(../images/divider-line-left.png) 313px 98px no-repeat,
+                    url(../images/divider-line-right.png) 600px 98px no-repeat;
         text-align: center;                    
         span {
             display: block;
@@ -843,7 +806,7 @@ label {
             }
             &:hover {
                 border-color: #8fcc34;
-                box-shadow: 0 0 8px #8fcc34;
+                box-shadow: 0 0 15px #8fcc34;
                 p {
                     border-bottom-color: #d8eeea;                   
                 }
@@ -854,16 +817,28 @@ label {
                 padding-bottom: 20px;
                 margin-right: -@p;
                 margin-left: -@p;
+                text-align: center;
                 .transition;
                 span {
-                    display: block;
                     text-align: center;
                     .transition;
                     &.cn {
+                        display: inline-block;
+                        position: relative;                        
                         color: @main-color;
                         font-size: @fs - 2;
+                        margin-left: -20px;
+                        &:after {
+                            content: ">";
+                            position: absolute;
+                            right: -20px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            font-size: @fs;
+                        }
                     }
                     &.en {
+                        display: block;
                         color: @text-color;
                         font-size: @fs;
                         text-transform: uppercase;
@@ -871,6 +846,7 @@ label {
                 }
                 &:hover {
                     background-color: #8fcc34;
+                    //box-shadow: 5px 5px 15px #8fcc34, -5px 5px 15px #8fcc34;
                     span {
                         color: @text-color;
                     }
@@ -918,7 +894,7 @@ label {
         .center-content;
         border-bottom: 1px solid #dadbdd;
         padding-top: 30px;
-        padding-bottom: 30px;
+        padding-bottom: 50px;
         position: relative;
         .clearfix;
         h3 {
@@ -926,8 +902,7 @@ label {
             width: 170px;
             background-repeat: no-repeat;
             background-position: left top;
-            padding-top: 90px;
-            padding-right: 20px;
+            padding: 110px 20px 0 10px;
             span {
                 display: block;
                 width: 100%;
@@ -951,35 +926,36 @@ label {
         ul {
             .fl;
             .clearfix;
-            width: 850px;
+            width: 800px;
             li {
-                width: 405px;
+                width: 355px;
                 .ellipsis;
                 .fl;
                 .clearfix;
-                margin-right: 20px;
+                margin-right: 90px;
                 margin-bottom: 20px;
                 height: 50px;
                 time {
                     display: block;
                     .fl;
-                    width: 75px;
+                    width: 85px;
                     height: 50px;
                     span {
                         display: inline-block;
                         &.day {
                             color: @main-color;
-                            font-size: @fs + 8;
+                            font-size: @fs + 16;
                         }
                         &.month {
                             color: #ccc;
                             font-size: @fs + 6;
                             position: relative;
-                            top: 20px;
+                            left: 5px;
+                            top: 15px;
                             &:after {
                                 content: "/";
                                 position: absolute;
-                                bottom: 5px;
+                                bottom: 3px;
                                 left: -10px;
                                 font-size: @fs + 14;
                             }
@@ -988,7 +964,7 @@ label {
                 }
                 .chief {
                     .fl;
-                    width: 320px;
+                    width: 270px;
                     > div {
                         .clearfix;
                         height: 30px;
@@ -996,6 +972,7 @@ label {
                         > i {
                             color: #ffba00;
                             .fl;
+                            font-size: @fs + 4;
                         }
                         > span {
                             display: inline-block;
@@ -1022,6 +999,9 @@ label {
                         }
                     }
                 }
+                &:nth-of-type(2n+2) {
+                    margin-right: 0;
+                }
             }
         }
         > a {
@@ -1029,8 +1009,8 @@ label {
             right: 0;
             bottom: 10px;
             display: block;
-            padding: 10px 20px;
-            background-color: @main-color;
+            padding: 8px 22px;
+            background-color: #00bb8a;
             transition: background-color .3s linear 0s;
             color: #fff;
             text-transform: uppercase;
@@ -1059,13 +1039,13 @@ label {
 /*服务*/
 .service {
     .page-width;
-    margin-top: 60px;
+    margin-top: 120px;
     h2 {
         .center-content;
         height: 100px;
         text-align: center;
-        background: url(../images/divider-line-left.png) left 52px no-repeat,
-                    url(../images/divider-line-right.png) right 52px no-repeat;                            
+        background: url(../images/divider-line-left.png) left 65px no-repeat,
+                    url(../images/divider-line-right.png) right 65px no-repeat;                            
         span {
             display: block;
             &.cn {
@@ -1075,14 +1055,14 @@ label {
                 color: #494949;
             }
             &.en {
-                font-size: @fs + 16;
+                font-size: @fs + 10;
                 text-transform: uppercase;
                 color: #5c5c5c;                
             }
         }                    
     }
     ul {
-        margin-top: 40px;
+        margin-top: 120px;
         .clearfix;
         .center-content;
         li {
@@ -1098,6 +1078,7 @@ label {
                 height: 210px;
                 text-align: center;
                 overflow: hidden;
+                .transition;
                 .hasicon {
                     z-index: 11;
                     position: absolute;
@@ -1106,10 +1087,11 @@ label {
                     width: 100%;
                     height: 210px;
                     padding-top: 30px;
+                    .transition;
                     i {
                         display: inline-block;
                         font-size: @fs + 34;
-                        color: @main-color;
+                        color: #3cc1d8;
                         padding: 10px 15px 0;
                         border-bottom: 1px solid #999;
                     }
@@ -1135,16 +1117,25 @@ label {
                     }
                 }
                 .noicon {
+                    opacity: 0;
                     z-index: 13;
                     position: absolute;
+                    top: 0;
+                    left: 0;
                     width: 100%;
                     height: 210px;
-                    margin-top: 210px;
-                    padding: 15px;
                     line-height: 1.5;
                     transition: all .5s linear 0s;
                     background-color: #fff;
                     overflow: hidden;
+                    .content {
+                        padding: 15px;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 100%;
+                        text-align: center;                        
+                    }
                     h4 {
                         font-size: @fs;
                         color: #544a4a;
@@ -1157,10 +1148,13 @@ label {
                     }
                 }
                 &:hover {
-                    border-color: #b2b2b2;
+                    border-color: #65a639;
+                    .hasicon {
+                        opacity: 0;
+                    }
                     .noicon {
-                        margin-top: 0;
-                    }    
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -1177,5 +1171,225 @@ label {
         display: block;
         width: 1440px;
         height: 152px;
+    }
+}
+
+/*底部*/
+#footer {
+    .supplement {
+        .center-content;
+        padding-top: 80px;
+        padding-bottom: 60px;
+        .clearfix;
+        .left {
+            .fl;
+            max-width: 440px;
+            padding-right: 40px;
+            .link {
+                .clearfix;
+                margin-bottom: 30px;
+                > div {
+                    .fl;
+                    position: relative;
+                    padding-right: 90px;
+                    &:last-of-type {
+                        padding-right: 50px; 
+                        &:after {
+                            top: 0;
+                            right: 1px;
+                        }
+                    } 
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 49px;
+                        width: 1px;
+                        height: 60px;
+                        background-color: #ccc;
+                    }
+                    h4 {
+                        font-size: @fs - 2;
+                        color: @text-color;
+                        margin-bottom: 15px;
+                    }
+                    a {
+                        display: block;
+                        font-size: @fs - 4;
+                        color: #666;
+                        padding-top: 8px;
+                        padding-bottom: 8px;
+                        .transition;
+                        &:hover {
+                            color: @main-color;
+                        }
+                    }
+                }
+            }
+            p {
+                font-size: @fs - 4;
+                color: #bca595;
+                line-height: 1.5;
+                margin-bottom: 10px;
+            }
+            .logo2 {
+                width: 356px;
+                height: 61px;
+                margin-top: 30px;
+            }
+        }
+        .center {
+            .fl;
+            h4 {
+                font-size: @fs - 2;
+                color: @text-color;
+                margin-bottom: 15px;
+            }
+            a {
+                display: block;
+                font-size: @fs - 4;
+                color: #666;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                .transition;
+                &:hover {
+                    color: @main-color;
+                }
+            }
+        }
+        .right {
+            .fr;
+            .tel {
+                font-size: 0;
+                color: @text-color;
+                margin-bottom: 15px;
+                i {
+                    font-size: @fs + 44px;
+                    display: inline-block;
+                    border-right: 1px solid #b6b6b6;
+                    padding-right: 10px;
+                    margin-right: 15px;
+                    color: #656565;
+                }
+                span {
+                    display: inline-block;
+                    line-height: 1.5;
+                    font-size: @fs + 4;
+                    strong {
+                        font-size: @fs + 2;
+                        color: #975217;
+                    }
+                }
+            }
+            p {
+                font-size: @fs;
+                color: #666;
+                margin-bottom: 5px;
+                a {
+                    color: #666;
+                }
+            }
+            .count-code {
+                margin-top: 20px;
+                > div,
+                > figure {
+                    .fl;
+                    width: 170px;
+                    height: 170px;
+                    border: 1px solid #ccc;
+                    text-align: center;
+                }
+                .count {
+                    background: transparent url(../images/count.jpg) no-repeat center 30px;
+                    padding-top: 130px;
+                    font-size: @fs + 2;
+                    color: @text-color;
+                    letter-spacing: 5px;
+                    padding-left: 5px;
+                    font-weight: bold;
+                }
+                figure {
+                    position: relative;
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+    }
+    .copyright-bg {
+        .page-width;
+        background-color: #2fa696;
+        .copyright {
+            @p: 15px;
+            .center-content;
+            text-align: center;
+            padding-top: @p;
+            padding-bottom: @p;
+            small {
+                display: inline-block;
+                vertical-align: middle;
+                color: #b2dfe5;
+            }
+            img {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+    .other {
+        position: fixed;
+        top: 400px;
+        //left: 50%;
+        //transform: translateX(600px);
+        right: 25px;
+        @size: 65px;
+        .weixin {
+            margin-bottom: 15px;
+            position: relative;
+            i {
+                display: block;
+                background-color: #499e4e;
+                color: #fff;
+                width: @size;
+                height: @size;
+                line-height: @size;
+                text-align: center;
+                font-size: @fs + 40;
+                border-radius: 50%;
+            }
+            .weixin-code {
+                display: none;
+                position: absolute;
+                top: 0;
+                right: 80px;
+                border: 1px solid #ccc;
+                box-shadow: 0 0 5px #999;
+                padding: 5px;
+                text-align: center;
+                span {
+                    display: block;
+                    font-size: @fs - 2;
+                    line-height: 1.8;
+                }
+            }
+        }
+        .collect {
+            position: relative;
+            i {
+                display: block;
+                background-color: #499e4e;
+                color: #fff;
+                width: @size;
+                height: @size;
+                line-height: @size;
+                text-align: center;
+                font-size: @fs + 30;
+                border-radius: 50%;
+            }
+        }
     }
 }

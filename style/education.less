@@ -430,12 +430,26 @@ label {
 /*头部*/
 @size: 80px;
 #header {
-    z-index: 999;
+    z-index: 9999;
     position: fixed;
     .page-width;
     height: @size;
     background-color: #fff;
     border-bottom: 2px solid #bab8bb;
+    /*部分响应式，这是违背最初想法的，哭脸*/
+    @media (max-width: 1280px) {
+        #slogan {
+            display: none;
+        }
+    }
+    @media (max-width: 800px) {
+        #signinSignup {
+            display: none;
+        }
+        #nav {
+            display: none;
+        }
+    }
     #logo {
         position: absolute;
         top: 50%;
@@ -738,7 +752,6 @@ label {
 .carousel-indicators .active {
     width: 20px;
     height: 20px;
-    margin: 0;
     background-color: #12c2b0;
     border-color: transparent;
     box-shadow: 0 0 0 transparent;

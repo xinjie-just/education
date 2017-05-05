@@ -1,17 +1,36 @@
 /*顶部部分元素的显示与隐藏*/
 $(window).scroll(function () {
     if($(window).scrollTop()>=300) {
-    	$("#signinSignup").hide(400); /* 当滑动到不小于 200px 时，标语、登录、注册显示，导航隐藏 */
-    	$("#slogan").css("left", "320px");
-       	$("#nav").show(400);
+    	if ($(window).width() > 800) {
+    		$("#nav").show();
+    	} else {
+    		$("#nav").hide();
+    	}
+    	
+    	$("#signinSignup").hide(); /* 当滑动到不小于 200px 时，标语、登录、注册显示，导航隐藏 */
+    	$("#slogan").css("left", "320px");   	
        	$("#logo img").attr("src", "images/logo3.png");
     }else {
-        $("#signinSignup").show(400); /* 当滑动到不小于 200px 时，标语、登录、注册隐藏，导航显示 */
+    	if ($(window).width() > 800) {
+    		$("#signinSignup").show(); /* 当滑动到不小于 200px 时，标语、登录、注册隐藏，导航显示 */
+    	}else {
+    		$("#signinSignup").hide();
+    	}
+        
 		$("#slogan").css("left", "50%");       
-       	$("#nav").hide(400);
+       	$("#nav").hide();
        	$("#logo img").attr("src", "images/logo.png");
     }
+    /*随屏幕分辨率改变隐藏一些东西*/
+    /*if($(window).width() <= 1280) {
+		$("#slogan").hide();
+	}
+	if($(window).width() <= 800) {
+		$("#signinSignup, #nav").hide();
+	}*/
 });
+
+
 
 /*微信的显示与隐藏*/
 $("#weixinIcon").hover(function() {

@@ -452,19 +452,6 @@ label:hover {
   border-bottom: 2px solid #bab8bb;
   /*部分响应式，这是违背最初想法的，哭脸*/
 }
-@media (max-width: 1280px) {
-  #header #slogan {
-    display: none;
-  }
-}
-@media (max-width: 800px) {
-  #header #signinSignup {
-    display: none;
-  }
-  #header #nav {
-    display: none;
-  }
-}
 #header #logo {
   position: absolute;
   top: 50%;

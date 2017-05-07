@@ -1,4 +1,57 @@
 /*顶部部分元素的显示与隐藏*/
+$(window).resize(function(){
+	if($(window).scrollTop()>=300) {
+		$("#logo img").attr("src", "images/logo3.png");
+		$("#nav").show();
+		$("#signinSignup").hide(); /* 当滑动到不小于 200px 时，标语、登录、注册显示，导航隐藏 */
+    	$("#slogan").css("left", "320px"); 
+		if ($(window).width() <= 730) {
+			console.log("200<width()");
+			$("#nav").hide();
+			$("#slogan").hide();
+
+		}
+		else if($(window).width() > 730 && $(window).width()<=1280 ){
+			console.log("730<width()<=1280");
+			$("#slogan").hide();
+		}
+		else{
+			console.log("width()>1280");
+			$("#slogan").show();
+			
+		}
+
+
+	}
+	else{
+		$("#logo img").attr("src", "images/logo.png");
+		$("#slogan").css("left", "50%");   
+		$("#nav").hide();
+		$("#signinSignup").show();
+		if ($(window).width() <= 760) {
+			console.log("430<width()");
+			$("#signinSignup").hide();
+			$("#slogan").hide();
+			
+		}
+		else if($(window).width() > 760 && $(window).width()<=1230 ){
+			console.log("430<width()<=800");
+			$("#slogan").hide();
+		}
+		else{
+			console.log("width()>800");
+			$("#signinSignup").show();
+			$("#slogan").show();
+       		
+			
+			
+		}
+	}
+	
+	/*首页背景*/
+	$(".item img:last-of-type").height($(".item img:last-of-type").width() * 2 / 5);
+});
+
 $(window).scroll(function () {
     if($(window).scrollTop()>=300) {
     	if ($(window).width() > 800) {

@@ -45,6 +45,7 @@ html {
     margin-left: auto;
 }
 body {
+    height: 100%;
     .page-width;
     font-size: @fs;
     color: @text-color;
@@ -86,6 +87,7 @@ a {
     &:hover {
         //当链接处于焦点、被激活和鼠标悬停其上时清除轮廓
         outline-width: 0;
+        text-decoration: none;
     }
 }
 
@@ -400,10 +402,14 @@ label {
 }
 .icon-weixin:before { content: "\e603"; }
 .icon-shoucang:before { content: "\e604"; }
+.icon-password:before { content: "\e632"; }
+.icon-keyboard:before { content: "\e6a7"; }
 .icon-phone:before { content: "\e615"; }
 .icon-scan:before { content: "\e65b"; }
 .icon-stick:before { content: "\e68e"; }
+.icon-username:before { content: "\e6a8"; }
 .icon-signup:before { content: "\e683"; }
+.icon-date:before { content: "\e8a6"; }
 .icon-signin:before { content: "\e602"; }
 .icon-crm:before { content: "\e65c"; }
 .icon-introduction:before { content: "\e65d"; }
@@ -547,6 +553,9 @@ label {
     }
 }
 /*主要内容*/
+#loginMain {    
+    height: 100%;
+}
 #main {
     padding-top: @size;
 }
@@ -1440,6 +1449,247 @@ label {
                 text-align: center;
                 font-size: @fs + 30;
                 border-radius: 50%;
+            }
+        }
+    }
+}
+
+/*===登录===*/
+.login {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: transparent url(../images/login-bg.jpg) no-repeat center / 100% 100%;
+    figure {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-527px, -50%);
+        width: 487px;
+        height: 420px;        
+    }
+    #loginForm {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(40px, -50%);
+        background-color: #fff;
+        box-shadow: 0 0 10px #999;
+        border-radius: 10px;
+        padding: 40px;
+        text-align: center;
+        h1 {
+            font-size: @fs + 8;
+            color: #000;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        i.icon-signin {
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: #acacac;
+            font-size: 46px;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+        .username,
+        .password {
+            .clearfix;
+            margin-bottom: 15px;
+            label {
+                display: block;
+                .fl;
+                width: 36px;
+                height: 36px;
+                text-align: center;
+                line-height: 36px;
+                background-color: #a1a1a1;
+                i {
+                    color: #fff;
+                    font-size: 22px;
+                }
+            }
+            input {
+                display: block;
+                .fl;
+                width: 240px;
+                height: 36px;
+                line-height: 34px;
+                padding-left: 10px;
+                border-width: 1px 1px 1px 0;
+                border-color: #b0b0b0;
+                border-style: solid;
+                font-size: @fs - 2;
+            }
+            
+        }
+        .group {
+            margin-top: 30px;
+            .clearfix;
+            @size: 34px;
+            label {
+                display: block;
+                .fl;
+                color: #666;
+                font-size: @fs - 2;
+                input {
+                    margin-right: 10px;
+                }
+            }
+            button {
+                display: block;
+                .fl;
+                color: #fff;
+                background-color: #00d1ab;
+                padding-right: @size;
+                padding-left: @size;
+                height: @size;
+                line-height: @size;
+                &:hover {
+                    background-color: #00b089;
+                }
+            }
+            a {
+                display: block;
+                .fr;
+                color: #6377e0;
+                font-size: @fs - 2;
+                &.signup {
+                    text-decoration: underline;
+                    height: @size;
+                    line-height: @size;
+                }
+            }
+        }
+    }
+}
+
+/*===新闻详情===*/
+.news-article-type-bg {
+    .page-width;
+    height: 250px;
+    border-bottom: 1px solid #f4f4f4;
+    background: transparent url(../images/news-article-type-bg.png) repeat-x;
+}
+/*面包屑导航*/
+.breadcrumbs {
+    .center-content;
+    margin-top: 30px;
+    position: relative;
+    height: 31px;
+    line-height: 31px;
+    margin-bottom: 30px;
+    ol {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 31px;
+        line-height: 31px;
+        li {
+            position: relative;
+            display: inline-block;
+            height: 31px;
+            line-height: 31px;
+            padding-left: 100px;
+            color: #999;
+            &:before {
+                content: "|";
+                position: absolute;
+                top: 0;
+                right: -50px;
+            }
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-left: 102px;
+            }
+            &:last-child:before {
+                content: "";
+            }
+        }
+    }
+}
+/*文章*/
+.artilce {
+    .center-content;
+    margin-top: 85px;
+    margin-bottom: 120px;
+    h2 {
+        font-size: @fs + 4;
+        color: #323232;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .group {
+        height: 35px;
+        line-height: 34px;
+        border-bottom: 1px solid #ccc;
+        padding-right: 20px;
+        padding-left: 20px;
+        .clearfix;
+        span {
+            display: block;
+            color: #666;
+            font-size: @fs - 2;
+            i {
+                margin-right: 5px;                
+            }
+            &.date {
+                .fl;
+            }
+            &.scan-count {
+                .fr;
+            }
+        }
+    }
+    article {
+        padding: 40px 50px 80px;
+        line-height: 1.8;
+        font-size: @fs - 2;
+        color: #333;
+    }
+    .page {
+        padding-right: 100px;
+        padding-left: 100px;
+        .clearfix;
+        > div {
+            a {
+                position: relative;
+                display: block;
+                padding: 5px 8px;
+                border: 1px solid #bbb;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 22px;
+                    height: 20px;                
+                }
+                &:hover {                    
+                    border-color: #999;
+                }
+            }
+            &.prev {
+                a {
+                    .fl;
+                    &:before {
+                        left: -40px;
+                        background: transparent url(../images/page-prev.png) no-repeat center;
+                    }                    
+                }
+            }
+            &.next {
+                a {
+                    .fr;
+                    &:before {
+                        right: -40px;
+                        background: transparent url(../images/page-next.png) no-repeat center;
+                    }                    
+                }
             }
         }
     }

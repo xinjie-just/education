@@ -72,6 +72,7 @@ html {
   margin-left: auto;
 }
 body {
+  height: 100%;
   width: 100%;
   max-width: 1920px;
   margin-right: auto;
@@ -109,6 +110,7 @@ a:focus,
 a:active,
 a:hover {
   outline-width: 0;
+  text-decoration: none;
 }
 /* ===文本=== */
 abbr[title] {
@@ -363,6 +365,12 @@ label:hover {
 .icon-shoucang:before {
   content: "\e604";
 }
+.icon-password:before {
+  content: "\e632";
+}
+.icon-keyboard:before {
+  content: "\e6a7";
+}
 .icon-phone:before {
   content: "\e615";
 }
@@ -372,8 +380,14 @@ label:hover {
 .icon-stick:before {
   content: "\e68e";
 }
+.icon-username:before {
+  content: "\e6a8";
+}
 .icon-signup:before {
   content: "\e683";
+}
+.icon-date:before {
+  content: "\e8a6";
 }
 .icon-signin:before {
   content: "\e602";
@@ -552,6 +566,9 @@ label:hover {
   margin-right: 0;
 }
 /*主要内容*/
+#loginMain {
+  height: 100%;
+}
 #main {
   padding-top: 80px;
 }
@@ -1528,4 +1545,281 @@ label:hover {
   text-align: center;
   font-size: 46px;
   border-radius: 50%;
+}
+/*===登录===*/
+.login {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: transparent url(../images/login-bg.jpg) no-repeat center / 100% 100%;
+}
+.login figure {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-527px, -50%);
+  width: 487px;
+  height: 420px;
+}
+.login #loginForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(40px, -50%);
+  background-color: #fff;
+  box-shadow: 0 0 10px #999;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+}
+.login #loginForm h1 {
+  font-size: 24px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.login #loginForm i.icon-signin {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #acacac;
+  font-size: 46px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.login #loginForm .username,
+.login #loginForm .password {
+  margin-bottom: 15px;
+}
+.login #loginForm .username:before,
+.login #loginForm .password:before {
+  content: "";
+  display: table;
+}
+.login #loginForm .username:after,
+.login #loginForm .password:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.login #loginForm .username label,
+.login #loginForm .password label {
+  display: block;
+  float: left;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  background-color: #a1a1a1;
+}
+.login #loginForm .username label i,
+.login #loginForm .password label i {
+  color: #fff;
+  font-size: 22px;
+}
+.login #loginForm .username input,
+.login #loginForm .password input {
+  display: block;
+  float: left;
+  width: 240px;
+  height: 36px;
+  line-height: 34px;
+  padding-left: 10px;
+  border-width: 1px 1px 1px 0;
+  border-color: #b0b0b0;
+  border-style: solid;
+  font-size: 14px;
+}
+.login #loginForm .group {
+  margin-top: 30px;
+}
+.login #loginForm .group:before {
+  content: "";
+  display: table;
+}
+.login #loginForm .group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.login #loginForm .group label {
+  display: block;
+  float: left;
+  color: #666;
+  font-size: 14px;
+}
+.login #loginForm .group label input {
+  margin-right: 10px;
+}
+.login #loginForm .group button {
+  display: block;
+  float: left;
+  color: #fff;
+  background-color: #00d1ab;
+  padding-right: 34px;
+  padding-left: 34px;
+  height: 34px;
+  line-height: 34px;
+}
+.login #loginForm .group button:hover {
+  background-color: #00b089;
+}
+.login #loginForm .group a {
+  display: block;
+  float: right;
+  color: #6377e0;
+  font-size: 14px;
+}
+.login #loginForm .group a.signup {
+  text-decoration: underline;
+  height: 34px;
+  line-height: 34px;
+}
+/*===新闻详情===*/
+.news-article-type-bg {
+  width: 100%;
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 250px;
+  border-bottom: 1px solid #f4f4f4;
+  background: transparent url(../images/news-article-type-bg.png) repeat-x;
+}
+/*面包屑导航*/
+.breadcrumbs {
+  display: block;
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  position: relative;
+  height: 31px;
+  line-height: 31px;
+  margin-bottom: 30px;
+}
+.breadcrumbs ol {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 31px;
+  line-height: 31px;
+}
+.breadcrumbs ol li {
+  position: relative;
+  display: inline-block;
+  height: 31px;
+  line-height: 31px;
+  padding-left: 100px;
+  color: #999;
+}
+.breadcrumbs ol li:before {
+  content: "|";
+  position: absolute;
+  top: 0;
+  right: -50px;
+}
+.breadcrumbs ol li:first-child {
+  padding-left: 0;
+}
+.breadcrumbs ol li:last-child {
+  padding-left: 102px;
+}
+.breadcrumbs ol li:last-child:before {
+  content: "";
+}
+/*文章*/
+.artilce {
+  display: block;
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 85px;
+  margin-bottom: 120px;
+}
+.artilce h2 {
+  font-size: 20px;
+  color: #323232;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.artilce .group {
+  height: 35px;
+  line-height: 34px;
+  border-bottom: 1px solid #ccc;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.artilce .group:before {
+  content: "";
+  display: table;
+}
+.artilce .group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.artilce .group span {
+  display: block;
+  color: #666;
+  font-size: 14px;
+}
+.artilce .group span i {
+  margin-right: 5px;
+}
+.artilce .group span.date {
+  float: left;
+}
+.artilce .group span.scan-count {
+  float: right;
+}
+.artilce article {
+  padding: 40px 50px 80px;
+  line-height: 1.8;
+  font-size: 14px;
+  color: #333;
+}
+.artilce .page {
+  padding-right: 100px;
+  padding-left: 100px;
+}
+.artilce .page:before {
+  content: "";
+  display: table;
+}
+.artilce .page:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.artilce .page > div a {
+  position: relative;
+  display: block;
+  padding: 5px 8px;
+  border: 1px solid #bbb;
+}
+.artilce .page > div a:before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 20px;
+}
+.artilce .page > div a:hover {
+  border-color: #999;
+}
+.artilce .page > div.prev a {
+  float: left;
+}
+.artilce .page > div.prev a:before {
+  left: -40px;
+  background: transparent url(../images/page-prev.png) no-repeat center;
+}
+.artilce .page > div.next a {
+  float: right;
+}
+.artilce .page > div.next a:before {
+  right: -40px;
+  background: transparent url(../images/page-next.png) no-repeat center;
 }

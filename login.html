@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0;">
-		<title>登录 |　四川省基础教育监测评估中心</title>
+		<title>登录 | 四川省基础教育监测评估中心</title>
 		<meta name="keywords" content="四川省基础教育监测评估中心" />
 		<meta name="description" content="四川省基础教育监测评估中心" />
 		<link rel="stylesheet" href="style/bootstrap.css" />
@@ -13,8 +13,34 @@
 	</head>
 
 	<body>
-		<main id="main" role="main">
-			
+		<main id="loginMain" role="main">
+			<div class="login">
+				<figure>
+					<img src="images/login-show.png" alt="登录"/>
+				</figure>
+				<form action="#" method="post" id="loginForm" name="loginForm">
+					<h1>用户登录</h1>
+					<i class="iconfont icon-signin"></i>
+					<div class="username">
+						<label for="username"><i class="iconfont icon-username"></i></label>
+						<input type="text" name="username" id="username" placeholder="账号/邮箱/手机" />
+					</div>
+					<div class="password">
+						<label for="password"><i class="iconfont icon-password"></i></label>
+						<input type="password" name="password" id="password" placeholder="请输入密码" />
+					</div>
+					<div class="group">
+						<label for="remember">
+							<input type="checkbox" name="remember" id="remember" />记住我
+						</label>
+						<a href="#" title="忘记密码">忘记密码？</a>
+					</div>
+					<div class="group">
+						<button type="submit" name="loginSubmit" id="loginSubmit">Login 登录</button>
+						<a href="#" title="注册" class="signup">新用户注册</a>
+					</div>
+				</form>
+			</div>
 		</main>
 		<script src="script/jquery-3.2.0.min.js"></script>
 		<script src="script/bootstrap.min.js"></script>

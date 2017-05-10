@@ -1568,6 +1568,76 @@ label {
     }
 }
 
+/*===新闻列表===*/
+.news-list-container {
+    width: 920px;
+    margin-right: auto;
+    margin-left: auto;    
+}
+.news-list {
+   margin-top: 60px;
+   li {
+       .clearfix;
+       margin-top: 25px;
+       padding-left: 95px;
+       padding-top: 10px;
+       &:nth-of-type(even) {
+           background: transparent url(../images/news-item-even-icon.png) left top no-repeat;
+       }
+       &:nth-of-type(odd) {
+           background: transparent url(../images/news-item-odd-icon.png) left top no-repeat;
+       }
+       > i {
+           display: block;
+           .fl;
+           font-size: @fs + 4;
+           color: #ffba00;
+           margin-right: 20px;
+       }
+       .text {
+           width: 620px;
+           .fl;
+           padding-bottom: 15px;
+           border-bottom: 1px solid #e5e5e5;
+           h2 {
+               font-size: @fs;
+               color: #575757;
+               .ellipsis;
+               margin-bottom: 10px;
+           }
+           p {
+               font-size: @fs - 2;
+               color: #999;
+               line-height: 22px;
+               max-height: 44px;
+               overflow: hidden;
+           }
+       }
+       .group {
+           .fr;
+           .date {
+               font-size: @fs - 4;
+               color: #575757;
+               margin-bottom: 5px;
+           }
+           .scan-count {
+               font-size: @fs - 4;
+               color: #575757;
+           }
+           a {
+               font-size: @fs - 2;
+               color: #6377e0;
+           }
+       }
+   } 
+}
+.pagination-container {
+    text-align: center;
+    .pagination {
+        margin-top: 70px;
+    }
+}
+
 /*===新闻详情===*/
 .news-article-type-bg {
     .page-width;
@@ -1577,7 +1647,9 @@ label {
 }
 /*面包屑导航*/
 .breadcrumbs {
-    .center-content;
+    width: 920px;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 30px;
     position: relative;
     height: 31px;
@@ -1616,21 +1688,24 @@ label {
 }
 /*文章*/
 .artilce {
-    .center-content;
-    margin-top: 85px;
-    margin-bottom: 120px;
+    width: 920px;
+    margin: 85px auto 120px;
     h2 {
         font-size: @fs + 4;
         color: #323232;
-        margin-bottom: 20px;
+        margin-bottom: 26px;
         text-align: center;
+        line-height: 1.5;
     }
     .group {
+        width: 720px;
+        margin-right: auto;
+        margin-left: auto;
         height: 35px;
         line-height: 34px;
         border-bottom: 1px solid #ccc;
-        padding-right: 20px;
-        padding-left: 20px;
+        padding-right: 40px;
+        padding-left: 40px;
         .clearfix;
         span {
             display: block;
@@ -1648,14 +1723,14 @@ label {
         }
     }
     article {
-        padding: 40px 50px 80px;
+        padding: 40px 0 80px;
         line-height: 1.8;
         font-size: @fs - 2;
         color: #333;
     }
     .page {
-        padding-right: 100px;
-        padding-left: 100px;
+        padding-right: 140px;
+        padding-left: 140px;
         .clearfix;
         > div {
             a {

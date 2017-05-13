@@ -488,7 +488,7 @@ label:hover {
 .icon-reported:before {
   content: "\e624";
 }
-.icon-yanzhengmayanzheng:before {
+.icon-verification:before {
   content: "\e6a9";
 }
 /*===首页===*/

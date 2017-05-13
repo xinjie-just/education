@@ -6,22 +6,15 @@ $(window).resize(function(){
 		$("#signinSignup").hide(); /* 当滑动到不小于 200px 时，标语、登录、注册显示，导航隐藏 */
     	$("#slogan").css("left", "320px"); 
 		if ($(window).width() <= 730) {
-			console.log("200<width()");
 			$("#nav").hide();
 			$("#slogan").hide();
-
 		}
 		else if($(window).width() > 730 && $(window).width()<=1280 ){
-			console.log("730<width()<=1280");
 			$("#slogan").hide();
 		}
 		else{
-			console.log("width()>1280");
-			$("#slogan").show();
-			
+			$("#slogan").show();			
 		}
-
-
 	}
 	else{
 		$("#logo img").attr("src", "images/logo.png");
@@ -29,22 +22,16 @@ $(window).resize(function(){
 		$("#nav").hide();
 		$("#signinSignup").show();
 		if ($(window).width() <= 760) {
-			console.log("430<width()");
 			$("#signinSignup").hide();
 			$("#slogan").hide();
 			
 		}
 		else if($(window).width() > 760 && $(window).width()<=1230 ){
-			console.log("430<width()<=800");
 			$("#slogan").hide();
 		}
 		else{
-			console.log("width()>800");
 			$("#signinSignup").show();
-			$("#slogan").show();
-       		
-			
-			
+			$("#slogan").show();    		
 		}
 	}
 	
@@ -68,32 +55,16 @@ $(window).scroll(function () {
     		$("#signinSignup").show(); /* 当滑动到不小于 200px 时，标语、登录、注册隐藏，导航显示 */
     	}else {
     		$("#signinSignup").hide();
-    	}
-        
+    	}        
 		$("#slogan").css("left", "50%");       
        	$("#nav").hide();
        	$("#logo img").attr("src", "images/logo.png");
     }
-    /*随屏幕分辨率改变隐藏一些东西*/
-    /*if($(window).width() <= 1280) {
-		$("#slogan").hide();
-	}
-	if($(window).width() <= 800) {
-		$("#signinSignup, #nav").hide();
-	}*/
 });
-
-
 
 /*微信的显示与隐藏*/
 $("#weixinIcon").hover(function() {
 	$("#weixinCode").toggle(400);
-});
-
-/*回到顶部*/
-$("#toTop").click(function () { 
-    $("html, body").animate({scrollTop: 0}, 100); /* 持续时间为 100ms */
-    return false;
 });
 
 //回到上一步
@@ -126,29 +97,7 @@ $("#toTop").click(function () {
     return false;
 });
 
-/*===设置文章格式===*/
-	$(".details-article").css("fontSize", "14px");
-	// 删除图片宽高属性
-	$(".article img").removeAttr("width");
-	$(".article img").removeAttr("height");
-	// 设置图片样式
-	$(".article img").css({
-		display: "block",
-		maxWidth: "100%",
-		height: "auto",
-		margin: "15px auto 0"
-	});
-	$(".article img + img").css("marginTop", "8px");
-	// 设置段落样式
-	$(".article > div, .article > p").css({
-		fontSize: "14px",
-		textIndent: "2.2em",
-		letterSpacing: ".1em",
-		lineHeight: 1.8,
-		marginTop: "7px",
-		textAlign: "justify",
-		wordWrap: "breakWord"	
-	});
-	// 删除段落中多余的换行
-	$(".article:has(br) br").remove();
-	$(".article > div:has(br) br").remove();
+/*禁止链接的默认事件*/
+$(".disabled").on("click", function(e) {
+	e.preventDefault();
+});

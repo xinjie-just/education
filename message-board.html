@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<title>留言板 | 四川省基础教育监测评估中心</title>
+		<meta name="keywords" content="四川省基础教育监测评估中心" />
+		<meta name="description" content="四川省基础教育监测评估中心" />
+		<link rel="stylesheet" href="style/bootstrap.css" />
+		<link rel="stylesheet" href="style/education.css" />
+	</head>
+
+	<body>
+		<header id="header" role="banner">
+			<figure class="logo" id="logo">
+				<img src="images/logo.png" alt="四川省基础教育监测评估中心 logo" />
+			</figure>
+			<figure class="slogan" id="slogan">
+				<img src="images/slogan.png" alt="四川省基础教育监测评估中心标语" />
+			</figure>
+			<div class="signin-signup" id="signinSignup">
+				<a href="#" title="注册" class="signin" id="signin"><i class="iconfont icon-signup"></i>注册</a>
+				<a href="#" title="登录" class="signup" id="signup"><i class="iconfont icon-signin"></i>登录</a>
+			</div>
+			<nav id="nav" role="navigation">
+				<ul>
+					<!-- 当前菜单时，a 添加 active 类 -->
+					<li>
+						<a href="#" title="功能01">功能01</a>
+					</li>
+					<li>
+						<a href="#" title="功能02">功能02</a>
+					</li>
+					<li>
+						<a href="#" title="功能03">功能03</a>
+					</li>
+					<li>
+						<a href="#" title="功能04" class="active">功能04</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main id="main" role="main">
+			<figure class="message-board">
+				<img src="images/message-board.png" alt="新闻类型"/>
+			</figure>
+			<nav class="breadcrumbs">
+				<ol>
+				  	<li><a href="#" title="首页">首页</a></li>
+				  	<li>留言板</li>
+				</ol>
+			</nav>
+			<div class="message-container">
+				<ul class="message-list">
+					<!--每一留言列表项包括：用户提问，和管理员解答-->
+					<li>
+						<!--问题包裹在类名为question的容器中-->
+						<div class="question">
+							<i class="iconfont icon-question"></i>
+							<div class="wrap">
+								<div class="nickname">
+									<span>向五洲</span>
+									<!--若有置顶，请添加下面的strong标签-->
+									<strong class="stick">置顶</strong>
+								</div>
+								<div class="details">
+									<!--这里是留言的主要内容，若不用分段，去掉p标签-->
+									<p>这是用户留言的第一段，这是用户留言的第一段，这是用户留言的第一段，这是用户留言的第一段，这是用户留言的第一段，这是用户留言的第一段，这是用户留言的第一段</p>
+									<p>这是用户留言的第二段，这是用户留言的第二段，这是用户留言的第二段，这是用户留言的第二段</p>
+								</div>
+								<div class="datetime">
+									<i class="iconfont icon-time"></i>
+									<em>2017-05-14 11:11:11</em>
+								</div>
+							</div>
+						</div>
+						<!--答案包裹在类名为answer的容器中-->
+						<div class="answer">
+							<i class="iconfont icon-answer"></i>
+							<div class="wrap">
+								<div class="nickname">
+									<span>管理员1</span>
+								</div>
+								<div class="details">
+									<!--这里是回复的主要内容，若不用分段，去掉p标签-->
+									<p>这是管理员回复的第一段，这是管理员回复的第一段，这是管理员回复的第一段，这是管理员回复的第一段，这是管理员回复的第一段，这是管理员回复的第一段，这是管理员回复的第一段</p>
+									<p>这是管理员回复的第二段，这是管理员回复的第二段，这是管理员回复的第二段，这是管理员回复的第二段</p>
+								</div>
+								<div class="datetime">
+									<i class="iconfont icon-time"></i>
+									<em>2017-05-15 11:11:11</em>
+								</div>								
+							</div>
+						</div>
+					</li>
+					<!--每一留言列表项包括：用户提问，和管理员解答-->
+					<li>
+						<!--问题包裹在类名为question的容器中-->
+						<div class="question">
+							<i class="iconfont icon-question"></i>
+							<div class="wrap">
+								<div class="nickname">
+									<span>向五洲</span>
+									<!--若有置顶，请添加下面的strong标签-->
+									<strong class="stick">置顶</strong>
+								</div>
+								<div class="details">
+									这是用户留言的内容详情，这是用户留言的内容详情，这是用户留言的内容详情，这是用户留言的内容详情，这是用户留言的内容详情
+								</div>
+								<div class="datetime">
+									<i class="iconfont icon-time"></i>
+									<em>2017-05-14 11:11:11</em>
+								</div>
+							</div>
+						</div>
+						<!--答案包裹在类名为answer的容器中-->
+						<div class="answer">
+							<i class="iconfont icon-answer"></i>
+							<div class="wrap">
+								<div class="nickname">
+									<span>管理员1</span>
+								</div>
+								<div class="details">
+									这是管理员回复的内容详情，这是管理员回复的内容详情，这是管理员回复的内容详情，这是管理员回复的内容详情，这是管理员回复的内容详情
+								</div>
+								<div class="datetime">
+									<i class="iconfont icon-time"></i>
+									<em>2017-05-15 11:11:11</em>
+								</div>								
+							</div>
+						</div>
+					</li>
+				</ul>
+				<nav aria-label="Page navigation" class="pagination-container">
+					<ul class="pagination">
+						<li>
+							<a href="#" aria-label="Previous">
+								<span aria-hidden="true">&laquo;</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="#">1</a>
+						</li>
+						<li>
+							<a href="#">2</a>
+						</li>
+						<li>
+							<a href="#">3</a>
+						</li>
+						<li>
+							<a href="#">4</a>
+						</li>
+						<li>
+							<a href="#">5</a>
+						</li>
+						<li>
+							<a href="#" aria-label="Next">
+								<span aria-hidden="true">&raquo;</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="write-message">
+				<i class="iconfont icon-write-message" id="iconWriteMessage" title="打开留言板"></i>
+				<div class="my-message-container" id="myMessageContainer">
+					<div class="my-message" id="myMessage">
+						<h3><span>我的留言</span></h3>
+						<div class="content">
+							<figure class="message-show">
+								<img src="images/my-message-show.png" alt="留言板"/>
+							</figure>
+							<form action="#" method="post" name="messageForm" id="messageForm">
+								<div class="name">
+									<label for="name">姓名</label>
+									<input type="text" name="name" id="name" placeholder="请输入您的姓名" />
+								</div>
+								<div class="phone">
+									<label for="phone">手机号</label>
+									<input type="text" name="phone" id="phone" placeholder="请输入您的手机号" />
+								</div>
+								<div class="message">
+									<label for="message">留言</label>
+									<textarea name="message" placeholder="请输入留言内容"></textarea>
+								</div>
+								<button type="submit" name="messageSubmit" id="messageSubmit" title="提交我的留言">OK提交</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!--决策依据，监测评估-->
+		<figure class="slogan3">
+			<img src="images/slogan3.jpg" alt="决策依据，监测评估" />
+		</figure>
+		<script src="script/jquery-3.2.0.min.js"></script>
+		<script src="script/bootstrap.min.js"></script>
+		<script src="script/education.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#myMessageContainer").width($(window).width());
+				$("#myMessageContainer").height($(window).height());
+				$("#iconWriteMessage").on("click", function(){
+					$("#myMessageContainer").slideDown(400);
+				});
+				$("#myMessageContainer").on("click", function(){
+					$(this).slideUp(400);
+				});
+				$("#myMessage").on("click", function(e){
+					e.stopPropagation();
+				});
+			});
+		</script>
+	</body>
+
+</html>

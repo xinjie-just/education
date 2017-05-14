@@ -365,11 +365,17 @@ label:hover {
 .icon-password:before {
   content: "\e632";
 }
+.icon-time:before {
+  content: "\e6b8";
+}
 .icon-shoucang:before {
   content: "\e604";
 }
 .icon-expert-review:before {
   content: "\e619";
+}
+.icon-answer:before {
+  content: "\e625";
 }
 .icon-keyboard:before {
   content: "\e6a7";
@@ -400,6 +406,12 @@ label:hover {
 }
 .icon-past:before {
   content: "\e608";
+}
+.icon-write-message:before {
+  content: "\e662";
+}
+.icon-question:before {
+  content: "\e646";
 }
 .icon-signup:before {
   content: "\e683";
@@ -2129,4 +2141,477 @@ label:hover {
   margin-left: auto;
   background-color: #287cdc;
   margin-top: 110px;
+}
+/*===留言板===*/
+.message-board {
+  width: 100%;
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 240px;
+  background: linear-gradient(to bottom, #e5e5e5, #ffffff);
+}
+.message-container {
+  width: 920px;
+  margin: 60px auto 0;
+}
+.message-container .message-list li {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #d6d6d6;
+}
+.message-container .message-list li > div:before {
+  content: "";
+  display: table;
+}
+.message-container .message-list li > div:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.message-container .message-list li > div > i {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 34px;
+  font-weight: bold;
+}
+.message-container .message-list li > div .wrap {
+  width: 520px;
+  padding: 0 25px 15px;
+  border-radius: 5px;
+}
+.message-container .message-list li > div .wrap .nickname {
+  position: relative;
+  height: 50px;
+  margin-bottom: 5px;
+  width: 100%;
+  font-size: 0;
+}
+.message-container .message-list li > div .wrap .nickname:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+.message-container .message-list li > div .wrap .nickname span {
+  line-height: 49px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px;
+  color: #334c70;
+  max-width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.message-container .message-list li > div .wrap .nickname strong {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  color: #f28214;
+  background-color: #fff;
+  margin-left: 8px;
+  font-weight: bold;
+  padding-right: 5px;
+  padding-left: 5px;
+  border: 1px solid #f28214;
+}
+.message-container .message-list li > div .wrap .details {
+  font-size: 16px;
+  color: #2e394a;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+.message-container .message-list li > div .wrap .details p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.message-container .message-list li > div .wrap .datetime i {
+  font-size: 14px;
+  color: #7a8493;
+  margin-right: 10px;
+}
+.message-container .message-list li > div .wrap .datetime em {
+  font-size: 12px;
+  color: #7a8493;
+  font-style: normal;
+}
+.message-container .message-list li .question {
+  margin-bottom: 20px;
+}
+.message-container .message-list li .question > i {
+  background-color: #14c2b0;
+  float: left;
+  margin-right: 30px;
+}
+.message-container .message-list li .question .wrap {
+  float: left;
+  background-color: #b7dcfe;
+}
+.message-container .message-list li .question .wrap .nickname {
+  border-bottom: 1px solid #a8cbea;
+}
+.message-container .message-list li .question .wrap .nickname:before {
+  left: -33px;
+  border-right: 10px solid #b7dcfe;
+}
+.message-container .message-list li .answer > i {
+  background-color: #ffb83b;
+  float: right;
+  margin-left: 30px;
+}
+.message-container .message-list li .answer .wrap {
+  float: right;
+  background-color: #ffda87;
+}
+.message-container .message-list li .answer .wrap .nickname {
+  border-bottom: 1px solid #edc97d;
+  text-align: right;
+}
+.message-container .message-list li .answer .wrap .nickname:before {
+  right: -33px;
+  border-left: 10px solid #ffda87;
+}
+.message-container .message-list li:last-of-type {
+  margin-bottom: 0;
+}
+/*留言框*/
+.write-message i {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: block;
+  width: 76px;
+  height: 76px;
+  line-height: 76px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 50px;
+  color: #fff;
+  background-color: #4aa04f;
+  cursor: pointer;
+}
+.write-message i:hover {
+  background-color: #176d1c;
+}
+.write-message .my-message-container {
+  z-index: 99999;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.write-message .my-message-container .my-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 50px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+.write-message .my-message-container .my-message h3 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.write-message .my-message-container .my-message h3 span {
+  display: inline-block;
+  position: relative;
+  color: #000;
+  font-size: 28px;
+}
+.write-message .my-message-container .my-message h3 span:after {
+  content: ">";
+  position: absolute;
+  top: 50%;
+  right: -26px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  line-height: 17px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #15c2af;
+}
+.write-message .my-message-container .my-message .content figure {
+  display: inline-block;
+  vertical-align: middle;
+  width: 217px;
+  height: 212px;
+  margin-right: 15px;
+}
+.write-message .my-message-container .my-message .content form {
+  display: inline-block;
+  vertical-align: middle;
+}
+.write-message .my-message-container .my-message .content form > div {
+  margin-bottom: 15px;
+}
+.write-message .my-message-container .my-message .content form > div:before {
+  content: "";
+  display: table;
+}
+.write-message .my-message-container .my-message .content form > div:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.write-message .my-message-container .my-message .content form > div label {
+  float: left;
+  display: block;
+  height: 34px;
+  line-height: 34px;
+  width: 70px;
+  margin-right: 20px;
+  text-align: right;
+  font-size: 16px;
+  color: #333333;
+}
+.write-message .my-message-container .my-message .content form > div input {
+  float: left;
+  display: block;
+  width: 240px;
+  height: 34px;
+  line-height: 32px;
+  border: 1px solid #b9b9b9;
+  padding-left: 10px;
+  font-size: 12px;
+  color: #999;
+}
+.write-message .my-message-container .my-message .content form > div textarea {
+  float: left;
+  width: 380px;
+  max-width: 380px;
+  min-width: 380px;
+  line-height: 28px;
+  height: 160px;
+  min-height: 80px;
+  max-height: 200px;
+  border: 1px solid #b9b9b9;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: #999;
+}
+.write-message .my-message-container .my-message .content form button {
+  margin-top: 30px;
+  margin-left: 90px;
+  padding: 8px 40px;
+  font-size: 16px;
+  background-color: #00d1ab;
+  color: #fff;
+}
+.write-message .my-message-container .my-message .content form button:hover {
+  background-color: #009e78;
+}
+/*题库系统*/
+.question-system {
+  width: 100%;
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 254px;
+  background: linear-gradient(to bottom, #b8b8e8, #d7d4ff);
+}
+.expert-review {
+  width: 100%;
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 308px;
+  background: transparent url(../images/expert-review-bg.png) repeat-x;
+}
+.call-for-question {
+  width: 1070px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 80px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.call-for-question h3 {
+  text-align: center;
+}
+.call-for-question h3 span {
+  display: block;
+}
+.call-for-question h3 span.cn {
+  font-size: 28px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+.call-for-question h3 span.en {
+  display: inline-block;
+  font-size: 28px;
+  color: #ccc;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  text-transform: capitalize;
+}
+.call-for-question ul {
+  margin-top: 70px;
+}
+.call-for-question ul:before {
+  content: "";
+  display: table;
+}
+.call-for-question ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.call-for-question ul li {
+  width: 420px;
+  height: 204px;
+  padding: 20px 25px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+}
+.call-for-question ul li:first-of-type {
+  float: left;
+  margin-left: 50px;
+}
+.call-for-question ul li:last-of-type {
+  float: right;
+  margin-right: 50px;
+  position: relative;
+}
+.call-for-question ul li:last-of-type:before {
+  content: "or";
+  position: absolute;
+  top: 50%;
+  left: -90px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #ffab26;
+  font-size: 28px;
+}
+.call-for-question ul li:hover {
+  box-shadow: 0 0 10px #d7d4ff;
+}
+.call-for-question ul li a {
+  display: block;
+  padding-top: 80px;
+  width: 100%;
+  height: 100%;
+}
+.call-for-question ul li a h4 {
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+.call-for-question ul li a h4 span {
+  color: #ffab26;
+}
+.call-for-question ul li a p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #999;
+}
+.call-for-question ul li:first-of-type a {
+  background: transparent url(../images/topic-offer-type-one.jpg) right top no-repeat;
+}
+.call-for-question ul li:last-of-type a {
+  background: transparent url(../images/topic-offer-type-two.jpg) left top no-repeat;
+  padding-left: 220px;
+}
+.query-question-form {
+  margin: 50px auto 0;
+  width: 600px;
+  min-height: 80px;
+  background: transparent url(../images/call-for-question.jpg) no-repeat left top;
+  padding-left: 180px;
+}
+.query-question-form > div {
+  margin-bottom: 15px;
+}
+.query-question-form > div label {
+  display: block;
+  height: 34px;
+  line-height: 34px;
+  text-align: right;
+  font-size: 16px;
+  color: #333333;
+}
+.query-question-form > div label input {
+  display: inline-block;
+  width: 270px;
+  height: 34px;
+  margin-left: 20px;
+  line-height: 32px;
+  border: 1px solid #b9b9b9;
+  padding-left: 20px;
+  font-size: 12px;
+  color: #999;
+}
+.query-question-form > div .tip {
+  display: inline-block;
+  margin-left: 190px;
+  height: 30px;
+  line-height: 30px;
+  position: relative;
+  color: #999;
+}
+.query-question-form > div .tip:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -14px;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  font-weight: bold;
+  background-color: #ffab26;
+}
+.query-question-form button {
+  margin-top: 30px;
+  margin-left: 170px;
+  padding: 8px 40px;
+  font-size: 16px;
+  background-color: #00d1ab;
+  color: #fff;
+}
+.query-question-form button:hover {
+  background-color: #009e78;
+}
+.generation-system {
+  width: 100%;
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 80px;
+  height: 300px;
+  background: transparent url(../images/generation-system-bg.png) repeat-x;
+}
+.more-function {
+  display: block;
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 113px;
+  line-height: 113px;
+  margin-top: 70px;
+  background: transparent url(../images/more-function.png) 450px center no-repeat;
+  padding-left: 620px;
+  font-size: 24px;
+  color: #ccc;
 }

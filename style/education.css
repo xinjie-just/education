@@ -2243,6 +2243,13 @@ label:hover {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.message-container .message-list li > div .wrap .details img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 .message-container .message-list li > div .wrap .datetime i {
   font-size: 14px;
   color: #7a8493;

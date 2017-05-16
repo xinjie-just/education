@@ -101,3 +101,7 @@ $("#toTop").click(function () {
 $(".disabled").on("click", function(e) {
 	e.preventDefault();
 });
+
+/*留言列表的留言*/
+$(".message-list").find("img").removeAttr("width");
+$(".message-list").find("img").removeAttr("height");

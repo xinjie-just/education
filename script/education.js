@@ -105,3 +105,7 @@ $(".disabled").on("click", function(e) {
 /*留言列表的留言*/
 $(".message-list").find("img").removeAttr("width");
 $(".message-list").find("img").removeAttr("height");
+
+/*错误页面ie浏览器中mian标签限制高度*/
+/*$("#errorMain").height($(window).innerHeight());
+$("#errorMain").width($(window).innerWidth());*/

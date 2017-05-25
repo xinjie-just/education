@@ -3386,3 +3386,417 @@ label.error {
         }
     }
 }
+
+/*===大事纪要===*/
+.events-list {
+    width: 920px;
+    margin: 70px auto 100px;
+    > li {
+        .clearfix;
+        margin-bottom: 50px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        > time {
+            .fl;
+            z-index: 10;
+            display: block;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: @fs + 2;
+            color: #fff;
+            position: relative;
+            &:before {
+                content: "";
+                width: 50px;
+                height: 1px;
+                position: absolute;
+                top: 50%;
+                left: 74px;
+                transform: translateY(-50%);
+            }
+            &:after {
+                content: "";
+                width: 5px;
+                height: 5px;
+                position: absolute;
+                top: 50%;
+                left: 128px;
+                transform: translateY(-50%);
+                border-radius: 50%;
+                background-color: #fff;
+            }
+        }
+        > ul {
+            .fl;
+            width: 780px;
+            margin-left: 54px;
+            > li {
+                @hsize: 8px;
+                @wsize: 7px;
+                border-left-width: @wsize * 2;
+                border-left-style: solid;
+                padding-left: 15px;
+                margin-bottom: @hsize;
+                &:last-of-type{
+                    margin-bottom: 0;                    
+                }
+                time {
+                    display: block;
+                    height: 40px;
+                    line-height: 40px;
+                    position: relative;
+                    font-size: @fs + 8;
+                    font-weight: bold; 
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: -29px;
+                        width: 0;
+                        height: 0;
+                        border-top: @hsize solid #fff;
+                        border-left: @wsize solid transparent;
+                        border-right: @wsize solid transparent;
+                    }
+                }
+                .text {
+                    position: relative;
+                    font-size: @fs;
+                    line-height: 1.5;
+                    color: @text-color + #333;
+                    padding-bottom: @hsize;
+                    margin-top: @hsize;
+                    word-wrap: break-word; 
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        bottom: -@hsize;
+                        left: -29px;
+                        width: 0;
+                        height: 0;
+                        border-left: @wsize solid transparent;
+                        border-right: @wsize solid transparent;                        
+                    }
+                    p {
+                        margin-bottom: @hsize;
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                &:nth-of-type(4n+1) {
+                    border-left-color: #71788a;
+                    time {
+                        color: #71788a;
+                    }
+                    .text {
+                        &:before {
+                            border-top: @hsize solid #71788a;                        
+                        }
+                    }                    
+                }
+                &:nth-of-type(4n+2) {
+                    border-left-color: #71788a + #212336;
+                    time {
+                        color: #71788a + #212336;
+                    }
+                    .text {
+                        &:before {
+                            border-top: @hsize solid #71788a + #212336;                        
+                        }
+                    }                    
+                }
+                &:nth-of-type(4n+3) {
+                    border-left-color: #71788a + #212336 + #212336;
+                    time {
+                        color: #71788a + #212336 + #212336;
+                    }
+                    .text {
+                        &:before {
+                            border-top: @hsize solid #71788a + #212336 + #212336;                        
+                        }
+                    }                    
+                }
+                &:nth-of-type(4n+4) {
+                    border-left-color: #71788a + #212336 + #212336 + #212336;
+                    time {
+                        color: #71788a + #212336 + #212336 + #212336;
+                    }
+                    .text {
+                        &:before {
+                            border-top: @hsize solid #71788a + #212336 + #212336 + #212336;                        
+                        }
+                    }
+                }
+            }
+        }
+        &:nth-of-type(4n+1){
+            > time {
+                background-color: #71788a;
+                &:before {
+                    background-color: #71788a;
+                }
+            }
+            > ul {
+                > li {
+                    @hsize: 8px;
+                    @wsize: 7px;
+                    &:nth-of-type(4n+1) {
+                        border-left-color: #71788a;
+                        time {
+                            color: #71788a;
+                        }
+                        .text {
+                            &:before {
+                                border-top: @hsize solid #71788a;                        
+                            }
+                        }                    
+                    }
+                    &:nth-of-type(4n+2) {
+                        border-left-color: #71788a + #212336;
+                        time {
+                            color: #71788a + #212336;
+                        }
+                        .text {
+                            &:before {
+                                border-top: @hsize solid #71788a + #212336;                        
+                            }
+                        }                    
+                    }
+                    &:nth-of-type(4n+3) {
+                        border-left-color: #71788a + #212336 + #212336;
+                        time {
+                            color: #71788a + #212336 + #212336;
+                        }
+                        .text {
+                            &:before {
+                                border-top: @hsize solid #71788a + #212336 + #212336;                        
+                            }
+                        }                    
+                    }
+                    &:nth-of-type(4n+4) {
+                        border-left-color: #71788a + #212336 + #212336 + #212336;
+                        time {
+                            color: #71788a + #212336 + #212336 + #212336;
+                        }
+                        .text {
+                            &:before {
+                                border-top: @hsize solid #71788a + #212336 + #212336 + #212336;                        
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &:nth-of-type(4n+2){
+            > time {
+                background-color: #95c0c6;
+                &:before {
+                    background-color: #95c0c6;
+                }
+            }
+            > ul {
+                > li {
+                    @hsize: 8px;
+                    @wsize: 7px;
+                    &:nth-of-type(4n+1) {
+                        border-left-color: #95c0c6;
+                        time {
+                            color: #95c0c6;
+                        }
+                        .text {
+                            &:before {
+                                border-top: @hsize solid #95c0c6;                        
+                            }
+                        }                    
+                    }
+                    &:nth-of-type(4n+2) {
+                        border-left-color: #95c0c6 + #212336;
+                        time {
+                            color: #95c0c6 + #212336;
+                        }
+                        .text {
+                            &:before {
+                                border-top: @hsize solid #95c0c6 + #212336;                        
+                            }
+                        }                    
+                    }
+                    &:nth-of-type(4n+3) {
+                        border-left-color: #95c0c6 + #212336 + #212336;
+                        time {
+                            color: #95c0c6 + #212336 + #212336;
+                        }
+                        .text {
+                            &:before {
+                                border-top: @hsize solid #95c0c6 + #212336 + #212336;                        
+                            }
+                        }                    
+                    }
+                    &:nth-of-type(4n+4) {
+                        border-left-color: #95c0c6 + #212336 + #212336 + #212336;
+                        time {
+                            color: #95c0c6 + #212336 + #212336 + #212336;
+                        }
+                        .text {
+                            &:before {
+                                border-top: @hsize solid #95c0c6 + #212336 + #212336 + #212336;                        
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &:nth-of-type(4n+3){
+            > time {
+                background-color: #e57160;
+                &:before {
+                    background-color: #e57160;
+                }
+            }
+            > ul {
+                > li {
+                    @hsize: 8px;
+                    @wsize: 7px;
+                    &:nth-of-type(4n+1) {
+                        border-left-color: #e57160;
+                        time {
+                            color: #e57160;
+                        }
+                        .text {
+                            &:before {
+                                border-top: @hsize solid #e57160;                        
+                            }
+                        }                    
+                    }
+                    &:nth-of-type(4n+2) {
+                        border-left-color: #e57160 + #212336;
+                        time {
+                            color: #e57160 + #212336;
+                        }
+                        .text {
+                            &:before {
+                                border-top: @hsize solid #e57160 + #212336;                        
+                            }
+                        }                    
+                    }
+                    &:nth-of-type(4n+3) {
+                        border-left-color: #e57160 + #212336 + #212336;
+                        time {
+                            color: #e57160 + #212336 + #212336;
+                        }
+                        .text {
+                            &:before {
+                                border-top: @hsize solid #e57160 + #212336 + #212336;                        
+                            }
+                        }                    
+                    }
+                    &:nth-of-type(4n+4) {
+                        border-left-color: #e57160 + #212336 + #212336 + #212336;
+                        time {
+                            color: #e57160 + #212336 + #212336 + #212336;
+                        }
+                        .text {
+                            &:before {
+                                border-top: @hsize solid #e57160 + #212336 + #212336 + #212336;                        
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &:nth-of-type(4n+4){
+            > time {
+                background-color: #afcf70;
+                &:before {
+                    background-color: #afcf70;
+                }
+            }
+            > ul {
+                > li {
+                    @hsize: 8px;
+                    @wsize: 7px;
+                    &:nth-of-type(4n+1) {
+                        border-left-color: #afcf70;
+                        time {
+                            color: #afcf70;
+                        }
+                        .text {
+                            &:before {
+                                border-top: @hsize solid #afcf70;                        
+                            }
+                        }                    
+                    }
+                    &:nth-of-type(4n+2) {
+                        border-left-color: #afcf70 + #212336;
+                        time {
+                            color: #afcf70 + #212336;
+                        }
+                        .text {
+                            &:before {
+                                border-top: @hsize solid #afcf70 + #212336;                        
+                            }
+                        }                    
+                    }
+                    &:nth-of-type(4n+3) {
+                        border-left-color: #afcf70 + #212336 + #212336;
+                        time {
+                            color: #afcf70 + #212336 + #212336;
+                        }
+                        .text {
+                            &:before {
+                                border-top: @hsize solid #afcf70 + #212336 + #212336;                        
+                            }
+                        }                    
+                    }
+                    &:nth-of-type(4n+4) {
+                        border-left-color: #afcf70 + #212336 + #212336 + #212336;
+                        time {
+                            color: #afcf70 + #212336 + #212336 + #212336;
+                        }
+                        .text {
+                            &:before {
+                                border-top: @hsize solid #afcf70 + #212336 + #212336 + #212336;                        
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.events-end {
+    width: 920px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: @fs + 8;
+    color: @text-color + #999;
+    position: relative;
+    text-align: center;
+    text-transform: capitalize;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 50%;
+        height: 1px;
+        padding-right: 40px;
+        background-color: currentcolor;
+        background-clip: content-box;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 50%;
+        height: 1px;
+        padding-left: 40px;
+        background-color: currentcolor;
+        background-clip: content-box;
+    }
+}

@@ -386,6 +386,9 @@ label.error {
 .icon-answer:before {
   content: "\e625";
 }
+.icon-signin:before {
+  content: "\e627";
+}
 .icon-keyboard:before {
   content: "\e6a7";
 }
@@ -437,14 +440,20 @@ label.error {
 .icon-section-three:before {
   content: "\e623";
 }
+.icon-signup:before {
+  content: "\e677";
+}
 .icon-question:before {
   content: "\e646";
 }
-.icon-signup:before {
-  content: "\e683";
+.icon-introduction:before {
+  content: "\e644";
 }
 .icon-date:before {
   content: "\e8a6";
+}
+.icon-summary:before {
+  content: "\e617";
 }
 .icon-test:before {
   content: "\e600";
@@ -452,59 +461,29 @@ label.error {
 .icon-repassword:before {
   content: "\e6b0";
 }
-.icon-signin:before {
-  content: "\e602";
-}
 .icon-search:before {
   content: "\e605";
 }
-.icon-crm:before {
-  content: "\e65c";
-}
-.icon-introduction:before {
+.icon-general-profile:before {
   content: "\e65d";
 }
-.icon-message:before {
-  content: "\e65e";
-}
-.icon-quota:before {
+.icon-msg-board:before {
   content: "\e65f";
 }
-.icon-kehu:before {
-  content: "\e660";
-}
-.icon-qiye:before {
-  content: "\e661";
-}
-.icon-quanxian:before {
-  content: "\e663";
-}
-.icon-resource:before {
+.icon-vote1:before {
   content: "\e664";
 }
 .icon-exam:before {
   content: "\e665";
 }
-.icon-info:before {
+.icon-quota:before {
   content: "\e666";
-}
-.icon-xiaoshou:before {
-  content: "\e667";
-}
-.icon-sampling:before {
-  content: "\e668";
 }
 .icon-online:before {
   content: "\e669";
 }
 .icon-reprot:before {
   content: "\e66a";
-}
-.icon-anquan:before {
-  content: "\e66b";
-}
-.icon-banben:before {
-  content: "\e66c";
 }
 .icon-see:before {
   content: "\e62d";
@@ -515,23 +494,29 @@ label.error {
 .icon-fill:before {
   content: "\e60b";
 }
-.icon-shezhi:before {
-  content: "\e680";
-}
 .icon-area:before {
   content: "\e687";
-}
-.icon-im:before {
-  content: "\e68a";
-}
-.icon-vote:before {
-  content: "\e68b";
 }
 .icon-reported:before {
   content: "\e624";
 }
 .icon-verification:before {
   content: "\e6a9";
+}
+.icon-assessment:before {
+  content: "\e655";
+}
+.icon-sampling:before {
+  content: "\e61f";
+}
+.icon-resource:before {
+  content: "\e628";
+}
+.icon-info:before {
+  content: "\e629";
+}
+.icon-vote2:before {
+  content: "\e62a";
 }
 /*===首页===*/
 /*头部*/
@@ -914,20 +899,15 @@ label.error {
 .general-profile ul li {
   float: left;
   width: 33.33333333%;
-  padding: 100px 30px 0;
+  padding: 30px 30px 0;
   border: 1px solid #e2e2e2;
-  background-repeat: no-repeat;
-  background-position: center 20px;
   transition: all .4s ease .1s;
+  text-align: center;
 }
-.general-profile ul li.about {
-  background-image: url(../images/introduction-icon.png);
-}
-.general-profile ul li.events {
-  background-image: url(../images/summary-icon.png);
-}
-.general-profile ul li.projects {
-  background-image: url(../images/assessment-icon.png);
+.general-profile ul li i {
+  display: inline-block;
+  font-size: 70px;
+  color: #7dc117;
 }
 .general-profile ul li h3 {
   text-align: center;
@@ -1298,8 +1278,8 @@ label.error {
 }
 .service ul li a .hasicon i {
   display: inline-block;
-  font-size: 50px;
-  color: #3cc1d8;
+  font-size: 60px;
+  color: #2cb8d1;
   padding: 10px 15px 0;
   border-bottom: 1px solid #999;
 }

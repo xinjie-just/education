@@ -2,36 +2,36 @@
 $(window).resize(function(){
 	if($(window).scrollTop()>=300) {
 		$("#logo img").attr("src", "images/logo3.png");
-		$("#nav").show();
-		$("#signinSignup").hide(); /* 当滑动到不小于 200px 时，标语、登录、注册显示，导航隐藏 */
+		$("#nav").show(500);
+		$("#signinSignup").hide(500); /* 当滑动到不小于 200px 时，标语、登录、注册显示，导航隐藏 */
     	$("#slogan").css("left", "320px"); 
 		if ($(window).width() <= 730) {
-			$("#nav").hide();
-			$("#slogan").hide();
+			$("#nav").hide(500);
+			$("#slogan").hide(500);
 		}
 		else if($(window).width() > 730 && $(window).width()<=1280 ){
-			$("#slogan").hide();
+			$("#slogan").hide(500);
 		}
 		else{
-			$("#slogan").show();			
+			$("#slogan").show(500);			
 		}
 	}
 	else{
 		$("#logo img").attr("src", "images/logo.png");
 		$("#slogan").css("left", "50%");   
-		$("#nav").hide();
-		$("#signinSignup").show();
+		$("#nav").hide(500);
+		$("#signinSignup").show(500);
 		if ($(window).width() <= 760) {
-			$("#signinSignup").hide();
-			$("#slogan").hide();
+			$("#signinSignup").hide(500);
+			$("#slogan").hide(500);
 			
 		}
 		else if($(window).width() > 760 && $(window).width()<=1230 ){
-			$("#slogan").hide();
+			$("#slogan").hide(500);
 		}
 		else{
-			$("#signinSignup").show();
-			$("#slogan").show();    		
+			$("#signinSignup").show(500);
+			$("#slogan").show(500);    		
 		}
 	}
 	
@@ -40,21 +40,43 @@ $(window).resize(function(){
 });
 
 $(window).scroll(function () {
-    if($(window).scrollTop()>=300) {
+	/*if ($(window).scrollTop()>=200){		
+    	$("#header").css({
+			zIndex: 9999,
+    		position: "fixed",
+    		top: 0,
+    	})
+    	if($(window).scrollTop()>=300){
+    		$("#header").slideDown(400);
+    	}
+	}
+	if ($(window).scrollTop()<300){
+		$("#header").slideUp(300);
+		if ($(window).scrollTop()<200){
+			$("#header").css({
+				zIndex: 9999,
+			    position: "relative",
+			    top: 0,
+			    display: "block"
+			});
+		}
+	}*/
+	
+    if($(window).scrollTop()>=300) {    	
     	if ($(window).width() > 800) {
-    		$("#nav").show();
+    		$("#nav").show(500);
     	} else {
-    		$("#nav").hide();
+    		$("#nav").hide(500);
     	}
     	
-    	$("#signinSignup").hide(); /* 当滑动到不小于 200px 时，标语、登录、注册显示，导航隐藏 */
+    	$("#signinSignup").hide(500); /* 当滑动到不小于 200px 时，标语、登录、注册显示，导航隐藏 */
     	$("#slogan").css("left", "320px");   	
        	$("#logo img").attr("src", "images/logo3.png");
-    }else {
+    }else {    	
     	if ($(window).width() > 800) {
-    		$("#signinSignup").show(); /* 当滑动到不小于 200px 时，标语、登录、注册隐藏，导航显示 */
+    		$("#signinSignup").show(500); /* 当滑动到不小于 200px 时，标语、登录、注册隐藏，导航显示 */
     	}else {
-    		$("#signinSignup").hide();
+    		$("#signinSignup").hide(500);
     	}        
 		$("#slogan").css("left", "50%");       
        	$("#nav").hide();

@@ -446,9 +446,9 @@ label {
     transition: all .4s ease .1s;
 }
 
-.center-content {
+.center-content(@width: 1200px) {
     display: block;
-    width: 1200px;
+    width: @width;
     margin-right: auto;
     margin-left: auto;
 }
@@ -1277,6 +1277,11 @@ label.error {
         h3 {
             .fl;
             width: 170px;
+            img {
+                display: block;
+                width: 108px;
+                height: auto;
+            }
             span {
                 display: block;
                 width: 100%;
@@ -1880,9 +1885,7 @@ label.error {
 /*===新闻列表===*/
 
 .news-list-container {
-    width: 920px;
-    margin-right: auto;
-    margin-left: auto;
+    .center-content(920px);
 }
 
 .news-list {
@@ -1964,8 +1967,8 @@ label.error {
 
 .news-article-type {
     .page-width;
-    height: 250px;
-    border-bottom: 1px solid #f4f4f4;
+//  height: 250px;
+//  border-bottom: 1px solid #f4f4f4;
     background-color: #cacdd7;
     background-image: linear-gradient(to bottom, #cacdd7, #fff);    
 }
@@ -1974,14 +1977,12 @@ label.error {
 /*面包屑导航*/
 
 .breadcrumbs {
-    width: 920px;
-    margin-right: auto;
-    margin-left: auto;
+    .center-content(920px);
     margin-top: 30px;
+    margin-bottom: 30px;
     position: relative;
     height: 31px;
     line-height: 31px;
-    margin-bottom: 30px;
     ol {
         position: absolute;
         top: 0;
@@ -2018,8 +2019,9 @@ label.error {
 /*文章*/
 
 .artilce {
-    width: 920px;
-    margin: 85px auto 120px;
+    .center-content(920px);
+    margin-top: 85px;
+    margin-bottom: 120px;
     h2 {
         font-size: @fs + 4;
         color: #323232;
@@ -2111,8 +2113,8 @@ label.error {
 }
 
 .info-reporting-container {
-    width: 920px;
-    margin: 30px auto 0;
+    .center-content(920px);
+    margin-top: 30px;
     h2 {
         @size: 60px;
         background-color: #c9b79e;
@@ -2296,8 +2298,8 @@ label.error {
 }
 
 .message-container {
-    width: 920px;
-    margin: 60px auto 0;
+    .center-content(920px);
+    margin-top: 60px;
     .message-list {
         li {
             margin-bottom: 30px;
@@ -2553,14 +2555,14 @@ label.error {
 
 .question-system {
     .page-width;
-    height: 254px;
+//  height: 254px;
     background-color: #b8b8e8;
     background-image: linear-gradient(to bottom, #b8b8e8, #d7d4ff);
 }
 
 .expert-review {
     .page-width;
-    height: 308px;
+//  height: 308px;
     background: transparent url(../images/expert-review-bg.png) repeat-x;
 }
 
@@ -2744,14 +2746,14 @@ label.error {
 
 .topic-offer {
     .page-width;
-    height: 256px;
+//  height: 256px;
     background-color: #c6eef3;
     background-image: linear-gradient(to bottom, #c6eef3, #60d0de);
 }
 
-.question-info {
-    width: 920px;
-    margin: 70px auto 0;
+.question-info {    
+    .center-content(920px);
+    margin-top: 70px;
     .heading {
         width: 100%;
         height: 80px;
@@ -2928,7 +2930,7 @@ label.error {
 
 .aboutus {
     .page-width;
-    height: 227px;
+//  height: 227px;
     background-color: #d8d9f8;
     background-image: linear-gradient(to bottom, #d8d9f8, #fff);
 }
@@ -3196,7 +3198,7 @@ label.error {
 
 .question-list-banner {
     .page-width;
-    height: 256px;
+//  height: 256px;
     background-color: #c6eef3;
     background-image: linear-gradient(to bottom, #c6eef3, #60d0de);
 }
@@ -3389,8 +3391,9 @@ label.error {
 
 /*===大事纪要===*/
 .events-list {
-    width: 920px;
-    margin: 70px auto 100px;
+    .center-content(920px);
+    margin-top: 70px;
+    margin-bottom: 100px;
     > li {
         .clearfix;
         margin-bottom: 50px;
@@ -3769,9 +3772,7 @@ label.error {
     }
 }
 .events-end {
-    width: 920px;
-    margin-right: auto;
-    margin-left: auto;
+    .center-content(920px);
     font-size: @fs + 8;
     color: @text-color + #999;
     position: relative;
@@ -3798,5 +3799,90 @@ label.error {
         padding-left: 40px;
         background-color: currentcolor;
         background-clip: content-box;
+    }
+}
+
+/*===监测项目===*/
+.projects-banner {
+    .page-width;
+    height: 236px;
+    background-color: #4b70d1;
+}
+.major-projects {
+    .center-content(920px);
+    margin-top: 80px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #e4e4e4;
+}
+.projects-list {
+    .clearfix;
+    .center-content(920px);
+    margin-top: 80px;    
+    li {
+        .clearfix;
+        margin-bottom: -50px;
+        padding-bottom: 100px;
+        height: 470px;
+        overflow: hidden;
+        position: relative;
+        &:before {
+            z-index: 9;
+            content: "";
+            position: absolute;
+            top: 40px;
+            left: 450px;
+            width: 40px;
+            height: 40px;
+            background-color: #e8ebed;
+            padding: 10px;
+            border: 10px solid #fcfcfc;
+            transform: rotateZ(45deg);
+        }
+        &:not(:last-of-type) {
+            &:after {
+                z-index: 8;
+                content: "";
+                position: absolute;
+                top: 37px;
+                left: 468px;
+                width: 4px;
+                height: 100%;
+                background-color: #e2e9ea;
+            }            
+        }
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        > div {
+            .fl;
+            width: 50%;
+            &:first-of-type {
+                padding-right: 110px;
+                padding-left: 30px;
+            }
+            &:last-of-type {
+                padding-right: 30px;
+                padding-left: 110px;
+            }
+            img {
+                display: block;
+                height: 113px;
+                width: auto;
+                margin: 0 auto 30px;
+            }
+            h3 {
+                font-size: @fs + 8;
+                color: @text-color;
+                line-height: 1.3;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+            p {
+                font-size: @fs + 4;
+                color: @text-color + #666;
+                line-height: 1.5;
+                text-align: center;
+            }
+        }
     }
 }

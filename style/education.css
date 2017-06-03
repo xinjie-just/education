@@ -615,17 +615,15 @@ label.error {
   line-height: 46px;
   padding-right: 42px;
   padding-left: 42px;
-  color: #666;
   font-size: 18px;
-  border: 2px solid #ededed;
+  border: 2px solid transparent;
   margin-right: 10px;
   transition: all .4s ease .1s;
 }
 #header #nav ul li a:hover,
 #header #nav ul li a.active {
-  border: 2px solid #14c2b0;
-  color: #fff;
-  background-color: #14c2b0;
+  border: 2px solid #0a7e20;
+  color: #0e8223;
 }
 #header #nav ul li:last-of-type a {
   margin-right: 0;
@@ -2561,7 +2559,7 @@ label.error {
   padding-left: 220px;
 }
 .query-question-form {
-  margin: 50px auto 0;
+  margin: 50px auto;
   width: 600px;
   min-height: 80px;
   background: transparent url(../images/call-for-question.jpg) no-repeat left top;

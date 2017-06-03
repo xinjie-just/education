@@ -720,7 +720,6 @@ label.error {
 #header {
     z-index: 9999;
     position: fixed;
-    //position: relative;
     .page-width;
     height: @size;
     background-color: #fff;
@@ -802,16 +801,16 @@ label.error {
                     line-height: @height - 4;
                     padding-right: 42px;
                     padding-left: 42px;
-                    color: #666;
+                    //color: #666;
                     font-size: @fs + 2;
-                    border: 2px solid #ededed;
+                    border: 2px solid transparent;
                     margin-right: 10px;
                     .transition;
                     &:hover,
                     &.active {
-                        border: 2px solid @main-color;
-                        color: #fff;
-                        background-color: @main-color;
+                        border: 2px solid #0a7e20;
+                        color: #0e8223;
+                        //background-color: @main-color;
                     }
                 }
                 &:last-of-type a {
@@ -2639,7 +2638,7 @@ label.error {
 }
 
 .query-question-form {
-    margin: 50px auto 0;
+    margin: 50px auto;
     width: 600px;
     min-height: 80px;
     background: transparent url(../images/call-for-question.jpg) no-repeat left top;

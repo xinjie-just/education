@@ -361,7 +361,7 @@ textarea {
 }
 
 //纠正在 iOS 和 Safair 中可点击类型不能点击的样式
-//更改字体属性，在 Safari 中以继承的方式。
+//更改字体属性，在 Safari 中以继承的方式
 ::-webkit-file-upload-button {
     -webkit-appearance: button;
     font: inherit;
@@ -560,6 +560,10 @@ label.error {
 
 .icon-scan:before {
     content: "\e65b";
+}
+
+.icon-message2:before {
+    content: "\e6ea";
 }
 
 .icon-bottom:before {
@@ -1691,6 +1695,22 @@ label.error {
         top: 400px;
         right: 25px;
         @size: 65px;
+        .message2 {
+            display: block;
+            position: relative;
+            margin-bottom: 15px;
+            i {
+                display: block;
+                background-color: #499e4e;
+                color: #fff;
+                width: @size;
+                height: @size;
+                line-height: @size;
+                text-align: center;
+                font-size: @fs + 30;
+                border-radius: 50%;
+            }
+        }
         .weixin {
             margin-bottom: 15px;
             position: relative;

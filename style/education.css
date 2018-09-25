@@ -407,6 +407,9 @@ label.error {
 .icon-scan:before {
   content: "\e65b";
 }
+.icon-message2:before {
+  content: "\e6ea";
+}
 .icon-bottom:before {
   content: "\e61b";
 }
@@ -1553,6 +1556,22 @@ label.error {
   position: fixed;
   top: 400px;
   right: 25px;
+}
+#footer .other .message2 {
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+}
+#footer .other .message2 i {
+  display: block;
+  background-color: #499e4e;
+  color: #fff;
+  width: 65px;
+  height: 65px;
+  line-height: 65px;
+  text-align: center;
+  font-size: 46px;
+  border-radius: 50%;
 }
 #footer .other .weixin {
   margin-bottom: 15px;
